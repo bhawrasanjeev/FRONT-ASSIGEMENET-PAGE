@@ -8,10 +8,10 @@ function generateForm() {
     const subject = document.getElementById('subject').value.trim();
     const teacher = document.getElementById('teacher').value.trim();
 
-    if (!name || !rollno || !branch || !subject || !teacher) {
-        alert("Please fill in all fields.");
-        return;
-    }
+    // if (!name || !rollno || !branch || !subject || !teacher) {
+    //     alert("Please fill in all fields.");
+    //     return;
+    // }
 
     document.getElementById('outName').innerText = name;
     document.getElementById('outRollno').innerText = rollno;

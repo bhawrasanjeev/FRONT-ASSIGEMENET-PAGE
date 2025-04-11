@@ -1,5 +1,19 @@
 AOS.init();
 
+document.querySelectorAll('#studentForm input').forEach((input, index, inputs) => {
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault(); 
+      const nextInput = inputs[index + 1];
+      if (nextInput) {
+        nextInput.focus();
+      } else {
+        generateForm();
+      }
+    }
+  });
+});
+
 function generateForm() {
   const name = document.getElementById('name').value.trim();
   const rollno = document.getElementById('rollno').value.trim();
@@ -22,6 +36,8 @@ function downloadPDF() {
   const spinner = document.getElementById('spinner');
   const downloadBtn = document.getElementById('downloadBtn');
 
+  element.classList.add('pdf-mode');
+
   spinner.style.display = 'block';
   downloadBtn.style.display = 'none';
 
@@ -36,5 +52,8 @@ function downloadPDF() {
   html2pdf().set(opt).from(element).save().then(() => {
     spinner.style.display = 'none';
     downloadBtn.style.display = 'block';
+
+    element.classList.remove('pdf-mode');
   });
 }
+

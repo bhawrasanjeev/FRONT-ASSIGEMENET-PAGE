@@ -1,9 +1,10 @@
-    body {
+    /* body {
         font-family: Arial, sans-serif;
         text-align: center;
 
-        background: linear-gradient(90deg, hsla(0, 100%, 67%, 1) 0%, hsla(0, 100%, 89%, 1) 100%);
-    }
+
+        background: linear-gradient(90deg, rgb(6, 29, 58) 0%, hsla(202, 27%, 45%, 1) 100%);
+        }
     .container {
         width: 50%;
         margin: auto;
@@ -12,35 +13,36 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 18px; /* Increased font size */
+        font-size: 18px; 
     }
     input {
         margin: 5px;
-        padding: 10px; /* Increased padding for better readability */
+        padding: 10px; 
         width: 90%;
-        font-size: 16px; /* Increased font size */
+        background-color: transparent;
+        font-size: 16px; 
+        color: #fff;
         border: 2px solid #ccc;
         border-radius: 25px;
         transition: border-color 0.3s ease;
     }
     input:focus {
-        border-color: #c42929;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        background-color: #ddd5d5;
+        border-color: #2ddbcd;
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.904);
+        background-color: #ffffff;
         transition: all 0.9s ease; 
-
         outline: none;
     }
     button {
         margin: 10px;
-        padding: 12px; /* Increased padding */
-        font-size: 16px; /* Increased font size */
+        padding: 12px; 
+        font-size: 16px; 
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
     button:hover {
-        background-color: #c42929;
-        color: white;
+        background-color: #2ddbcd;
+        color: black;
         border-radius: 25px;
         transform: scale(1.02);
         transition: all 0.9s ease; 
@@ -52,21 +54,21 @@
         margin-top: 20px;
         font-weight: bolder;
         background-color: #ffff;
-        font-size: 34px; /* Increased font size for output */
+        font-size: 34px; 
         text-align: left;
     }
     #output strong {
-        font-size: 24px; /* Increased font size for strong text */
+        font-size: 24px; 
         display: inline-block;
-        width: 40%; /* Adjust width for left alignment */
+        width: 40%; 
         text-align: left;
     }
     #output span {
         display: inline-block;
-        width: 50%; /* Adjust width for right alignment */
+        width: 50%; 
         text-align: right; 
-        font-weight: bold; /* Make the text bold */
-        font-size: 20px; /* Increased font size for span text */
+        font-weight: bold; 
+        font-size: 20px; 
     }
     #output img {
         display: block;
@@ -74,19 +76,17 @@
         margin: 0 auto;
     }
     #output h2 {
-        font-size: 30px; /* Increased font size for h2 */
+        font-size: 30px;
         margin-bottom: 10px;
         font-weight: bolder;
         
     }
     .container h2 {
         font-size: 45px;
-        margin-bottom: 20px;
-        /* background-color: #c42929; */
-    
+        margin-bottom: 20px;    
     }
     .container {
-        /* background-color: #c42929; */
+        
         width: 500px;
         padding: 20px;
     }
@@ -106,4 +106,168 @@
     }
     footer a:hover {
         text-decoration: underline;
+    } */
+
+
+
+
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
+    
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(90deg, rgb(6, 29, 58) 0%, hsla(202, 27%, 45%, 1) 100%);
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        margin: auto;
+        flex: 1;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+    }
+    
+    input {
+        margin: 5px 0;
+        padding: 10px;
+        width: 100%;
+        background-color: transparent;
+        font-size: 16px;
+        color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 25px;
+        transition: border-color 0.3s ease;
+    }
+    
+    input:focus {
+        border-color: #2ddbcd;
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.904);
+        background-color: #ffffff;
+        color: #000;
+        transition: all 0.9s ease;
+        outline: none;
+    }
+    
+    button {
+        margin: 10px 0;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    button:hover {
+        background-color: #2ddbcd;
+        color: black;
+        border-radius: 25px;
+        transform: scale(1.02);
+        transition: all 0.9s ease;
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.767);
+    }
+    
+    #output {
+        display: none;
+        padding: 20px;
+        margin-top: 20px;
+        font-weight: bolder;
+        background-color: #fff;
+        font-size: 34px;
+        text-align: left;
+    }
+    
+    #output strong {
+        font-size: 24px;
+        display: inline-block;
+        /* width: 50%; */
+        margin : 30px;
+        text-align: left;
+    }
+    
+    #output span {
+        display: inline-block;
+        width: 47%;
+        text-align: right;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    #output img {
+        display: block;
+        height: 100px;
+        margin: 0 auto;
+    }
+    
+    #output h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        margin-left: 30px;
+        color: #000;
+        font-weight: bolder;
+    }
+    
+    .container h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    
+    footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        border-top: 1.5px solid #29c4b7;
+        margin-top: auto;
+        width: 100%;
+    }
+    footer a {
+        color: #f1c40f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .container {
+            width: 90%;
+            padding: 15px;
+        }
+    
+        input, button {
+            width: 100%;
+        }
+    
+        #output strong,
+        #output span {
+            width: 100%;
+            display: block;
+            text-align: left;
+            font-size: 18px;
+        }
+    
+        #output {
+            font-size: 24px;
+        }
+    }
+    

@@ -1,4 +1,4 @@
-* {
+ * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -111,7 +111,7 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 35px 0;
   }
   
   footer {
@@ -140,7 +140,6 @@
     font-weight: bold;
   }
   
-  /* Responsive */
   @media (max-width: 480px) {
     .container {
       width: 95%;
@@ -162,6 +161,18 @@
   
     .input-group input {
       padding-left: 35px;
+    }
+  }
+
+  @media screen {
+    .pdf-mode * {
+      font-size: 18px !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+    }
+  
+    .pdf-mode p {
+      gap: 0 !important;
     }
   }
   
